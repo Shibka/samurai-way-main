@@ -40,11 +40,6 @@ let users = [
 },
 ]
 
-let b: Array<number | string>;
-b = [1,1,2,3,4,5];
-b = ['hfffdf', 'dfdfdfd'] ;
-b = [];
-b = [true, false]
 
 
 console.log(users[0].address.city);
