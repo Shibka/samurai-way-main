@@ -5,25 +5,32 @@ function hello() {
   debugger;
   alert("Hello Alex");
 }
-hello();
 
 function App() {
-  return <div>Hello, samurai! Let's go!</div>;
+  debugger;
+  return (
+    <div>
+      Hello, samurai! Let's go!
+      <Rating />
+      <Accordion />
+    </div>
+  );
 }
 
 function Rating() {
+  debugger;
   return (
     <div>
-      <div>Start</div>
-      <div>Start</div>
-      <div>Start</div>
-      <div>Start</div>
-      <div>Start</div>
+      <Star />
+      <Star />
+      <Star />
+      <Star />
     </div>
   );
 }
 
 function Accordion() {
+  debugger;
   return (
     <div>
       <h3>Menu</h3>
@@ -34,6 +41,10 @@ function Accordion() {
       </ul>
     </div>
   );
+}
+
+function Star() {
+  return <div>Star</div>;
 }
 
 export default App;
