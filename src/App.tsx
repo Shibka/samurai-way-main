@@ -1,26 +1,26 @@
 import React from "react";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
-import { Rating as R } from "./components/Rating/Rating";
+import { Rating } from "./components/Rating/Rating";
 
 function App() {
   console.log("App rendering");
 
   return (
     <div>
-      <input />
-
       <AppTitle />
-      <R />
+      Article 1
+      <Rating value={3} />
       <Accordion />
-      <R />
+      Article 2
+      <Rating value={4} />
     </div>
   );
 }
 
 function AppTitle() {
   console.log("AppTitle rendering");
-  return <>This is App component</>;
+  return <div>This is App component</div>;
 }
 
 export default App;
