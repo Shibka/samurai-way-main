@@ -8,6 +8,8 @@ function App() {
 
   return (
     <div>
+      <input />
+
       <AppTitle />
       <R />
       <Accordion />
