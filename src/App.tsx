@@ -19,8 +19,6 @@ function App() {
 
       <UncontrolledOnOff onClick={setOn} />
       {on.toString()}
-      {/*<UncontrolledOnOff />*/}
-      {/*<UncontrolledOnOff />*/}
       <Accordion
         titleValue={"Main"}
         collapsed={accordionCollapsed}
@@ -29,22 +27,6 @@ function App() {
         }}
       />
       <UncontrolledAccordion titleValue={"Users"} />
-
-      {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
-      {/*<UncontrolledRating />*/}
-
-      {/*<PageTitle title={"This is App component"} />*/}
-      {/*<PageTitle title={"My friends"} />*/}
-      {/*Article 1*/}
-      {/*<UncontrolledRating value={0} />*/}
-      {/*<Accordion titleValue={"Menu"} collapsed={true} />*/}
-      {/*<Accordion titleValue={"Users"} collapsed={false} />*/}
-      {/*Article 2*/}
-      {/*<UncontrolledRating value={1} />*/}
-      {/*<UncontrolledRating value={2} />*/}
-      {/*<UncontrolledRating value={3} />*/}
-      {/*<UncontrolledRating value={4} />*/}
-      {/*<UncontrolledRating value={5} />*/}
     </div>
   );
 }
