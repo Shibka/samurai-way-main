@@ -1,9 +1,7 @@
 import React, {ChangeEvent, useRef, useState} from "react";
-import type {Meta, StoryObj} from "@storybook/react";
 
 const meta = {
     title: "input",
-    // component: OnOff,
 };
 
 export default meta;
@@ -36,4 +34,31 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
             - value: {value} </>
     );
 };
-export const ControlledInput = () => <input value={"Hellou"}/>;
+
+export const ControlledInput =() =>{
+const [parentValue, setParentValue] = useState('')
+
+    const onChangeHandler = (e:ChangeEvent<HTMLInputElement>)=> {setParentValue(e.currentTarget.value)}
+
+    return <input value={parentValue} onChange={onChangeHandler} />
+}
+export const ControlledCheckBox =() =>{
+    const [parentValue, setParentValue] = useState(false)
+
+    const onChangeHandler = (e:ChangeEvent<HTMLInputElement>)=> {setParentValue(e.currentTarget.checked)}
+
+    return <input type={"checkbox"} onChange={onChangeHandler} />
+}
+export const ControlledSelect =() =>{
+    const [parentValue, setParentValue] = useState<string | undefined>('2')
+
+    const onChangeHandler = (e:ChangeEvent<HTMLSelectElement>)=> setParentValue(e.currentTarget.value)
+
+    return <select value={parentValue} onChange={onChangeHandler}>
+        <option>none</option>
+        <option value={"1"}>Minsk</option>
+        <option value={"2"}>Warsaw</option>
+        <option value={"3"}>London</option>
+    </select>
+}
+export const ControlledFixedInput = () => <input value={"Hellou"}/>;
