@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 type PropsType = {
-  // on: boolean;
+  on: boolean;
   onClick: (on: boolean) => void;
 };
 
-function UncontrolledOnOff(props: PropsType) {
+export function UncontrolledOnOff(props: PropsType) {
   let [on, setOn] = useState(true);
 
   const onStyle = {
@@ -54,5 +54,3 @@ function UncontrolledOnOff(props: PropsType) {
     </div>
   );
 }
-
-export default UncontrolledOnOff;

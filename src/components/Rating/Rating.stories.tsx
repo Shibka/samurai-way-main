@@ -10,51 +10,51 @@ const meta: Meta<typeof Rating> = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type RatingType = StoryObj<typeof meta>;
 
-// export const Base: Story = {
+// export const Base: RatingType = {
 //   args: {
 //   },
 // };
 
-export const EmptyRating: Story = {
+export const EmptyRating: RatingType = {
   args: {
     value: 0,
     onClick: () => {},
   },
 };
-export const Rating1: Story = {
+export const Rating1: RatingType = {
   args: {
     value: 1,
     onClick: () => {},
   },
 };
-export const Rating2: Story = {
+export const Rating2: RatingType = {
   args: {
     value: 2,
     onClick: () => {},
   },
 };
-export const Rating3: Story = {
+export const Rating3: RatingType = {
   args: {
     value: 3,
     onClick: () => {},
   },
 };
-export const Rating4: Story = {
+export const Rating4: RatingType = {
   args: {
     value: 4,
     onClick: () => {},
   },
 };
-export const Rating5: Story = {
+export const Rating5: RatingType = {
   args: {
     value: 5,
     onClick: () => {},
   },
 };
 
-export const ChangeRating: Story = {
+export const ChangeRating: RatingType = {
   render: (args) => {
     // eslint-disable-next-line
     const [rat, setRating] = React.useState<RatingValueType>(1);

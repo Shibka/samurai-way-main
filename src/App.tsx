@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import { Rating, RatingValueType } from "./components/Rating/Rating";
-import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
+import UncontrolledOnOff from "./components/UncontrolledOnOf/UncontrolledOnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import { UncontrolledRating } from "./components/UncontrolledRating/UncontrolledRating";
-import OnOff from "./components/OnOff/OnOff";
+import { OnOff } from "./components/OnOff/OnOff";
 
 function App() {
   console.log("App rendering");
@@ -26,6 +26,7 @@ function App() {
           setAccordionCollapsed(!accordionCollapsed);
         }}
       />
+
       <UncontrolledAccordion titleValue={"Users"} />
     </div>
   );
