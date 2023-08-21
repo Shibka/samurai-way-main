@@ -1,0 +1,32 @@
+.select-title {
+    border: black 1px solid;
+    width: 80px;
+    text-align: left;
+}
+.select-title-collapsed {
+    border: black 2px solid;
+    width: 80px;
+    text-align: left;
+}
+.arrow-right {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+    text-align: right;
+}
+.items {
+    border: black 1px solid;
+    width: 80px;
+    height: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.data{
+
+}

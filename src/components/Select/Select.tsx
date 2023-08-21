@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-
+import './Select.css'
 
 type ItemType = {
     title: string
@@ -9,7 +8,7 @@ type ItemType = {
 export type SelectPropsType = {
     value: any
     onChange: () => void
-    onClick: (value:any)=>void
+    onClick: (title:any)=>void
     items: ItemType[]
     title: string
     collapsed: boolean
@@ -17,13 +16,14 @@ export type SelectPropsType = {
 
 export function Select(props: SelectPropsType) {
     return (
-        <div onClick={()=>props.onChange()}>
-            {props.title}
-
-
-            <ul>
-                {!props.collapsed && props.items.map(el=> <li onClick={() =>{props.onClick(el.value)}}>{el.title}</li>)}
-            </ul>
+        <>
+        <div onClick={()=>props.onChange()} className={props.collapsed? 'select-title-collapsed':'select-title'} >
+            {props.title} <span className={'arrow-right' }></span>
         </div>
+
+            <div className={props.collapsed ? '' : 'items'}>
+                {!props.collapsed && props.items.map(el=> <div className={'data'} onClick={() =>{props.onClick(el.title)}}>{el.title}</div>)}
+            </div>
+        </>
     );
 }

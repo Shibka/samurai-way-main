@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import type {Meta, StoryObj} from "@storybook/react";
 
 import {Select} from "./Select";
@@ -27,15 +27,18 @@ export const ChangingSelect: Select = {
     render: (args) => {
         // eslint-disable-next-line
         const [value, setValue] = useState(true);
+        // eslint-disable-next-line
+        const [parentValue, setParentValue] = useState('Select')
 
         return (
             <Select
                 {...args}
-                title={'Select'}
+                title={parentValue}
                 collapsed={value}
                 onChange={() => setValue(!value)}
                 onClick={(id) => {
-                    alert(`user with ID ${id}, Hello`)
+                    setParentValue(id)
+                    setValue(true)
                 }}
                 items={[
                     {title: 'Alex', value: 1},
