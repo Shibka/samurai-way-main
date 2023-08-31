@@ -1,14 +1,14 @@
-.select-title {
+.selectTitle {
     border: black 1px solid;
     width: 80px;
     text-align: left;
 }
-.select-title-collapsed {
+.selectTitleCollapsed {
     border: black 2px solid;
     width: 80px;
     text-align: left;
 }
-.arrow-right {
+.arrowRight {
     position: relative;
     display: inline-block;
     width: 0;
@@ -27,10 +27,8 @@
     flex-direction: column;
     justify-content: space-around
 }
-.data {
-
-}
-.selected{
+.item.selected {
     background-color: blue;
     color: white;
 }
+

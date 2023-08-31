@@ -12,17 +12,16 @@ export default meta;
 
 type Select = StoryObj<typeof meta>;
 
-// export const Collapsed: Select = {
-//     args: {
-//         titleValue: "Menu",
-//         collapsed: true,
-//         onChange: () => {
-//         },
-//         items: [{title: 'Alex', value: 1}, {title: 'Leha', value: 2}, {title: 'Gleb', value: 3}],
-//         onClick: () => {
-//         }
-//     },
-// };
+export const Collapsed: Select = {
+    args: {
+        collapsed: true,
+        onChange: () => {
+        },
+        items: [{title: 'Alex', value: 1}, {title: 'Leha', value: 2}, {title: 'Gleb', value: 3}],
+        onClick: () => {
+        }
+    },
+};
 export const ChangingSelect: Select = {
     render: (args) => {
         // eslint-disable-next-line
