@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 type RatingPropsType = {};
 
+export const UncontrolledRatingMemo = React.memo(UncontrolledRating)
 export function UncontrolledRating(props: RatingPropsType) {
   let [value, setValue] = useState(0);
 

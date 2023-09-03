@@ -13,6 +13,8 @@ type ItemType = {
     value: any
 }
 
+export const AccordionMemo = React.memo(Accordion)
+
 export function Accordion(props: AccordionPropsType) {
     return (
         <>

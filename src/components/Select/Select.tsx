@@ -14,6 +14,7 @@ export type SelectPropsType = {
     collapsed: boolean
 };
 
+export const SelectMemo = React.memo(Select)
 export function Select(props: SelectPropsType) {
     const [hovered, setHovered] = useState(props.value)
 

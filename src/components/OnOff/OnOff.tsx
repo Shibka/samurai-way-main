@@ -5,6 +5,7 @@ type PropsType = {
   onClick: (on: boolean) => void;
 };
 
+export const OnOffMemo = React.memo(OnOff)
 export function OnOff(props: PropsType) {
   const onStyle = {
     width: "30px",

@@ -5,7 +5,7 @@ type AccordionPropsType = {
     titleValue: string;
 };
 
-
+export const UncontrolledAccordionMemo = React.memo(UncontrolledAccordion)
 function UncontrolledAccordion(props: AccordionPropsType) {
     // let [collapsed, setCollapsed] = useState(false);
     let [state, dispatch] = useReducer(reducer, {collapsed: false});

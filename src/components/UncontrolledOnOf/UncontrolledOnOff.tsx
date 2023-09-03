@@ -5,6 +5,7 @@ type PropsType = {
   onClick: (on: boolean) => void;
 };
 
+export const  UncontrolledOnOffMemo = React.memo(UncontrolledOnOff)
 export function UncontrolledOnOff(props: PropsType) {
   let [on, setOn] = useState(true);
 
