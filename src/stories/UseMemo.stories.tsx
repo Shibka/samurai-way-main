@@ -26,7 +26,7 @@ export const Example1 = () => {
        }
        return tempResultA
    }, [a])
-
+   
 
 for(let i = 1; i <= b; i++){
      resultB *= i;
