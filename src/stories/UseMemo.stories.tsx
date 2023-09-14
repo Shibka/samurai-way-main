@@ -6,7 +6,8 @@ const meta = {
 
 export default meta;
 
-export const Example1 = () => {
+
+export const DifficultCountingExample = () => {
 
     const [a, setA] = useState(3)
     const [b, setB] = useState(3)
@@ -29,6 +30,7 @@ export const Example1 = () => {
    
 
 for(let i = 1; i <= b; i++){
+    debugger
      resultB *= i;
 }
 
@@ -44,3 +46,35 @@ for(let i = 1; i <= b; i++){
         </div>
     </>
 };
+    const UsersSecret = (props: { users: Array<string> }) => {
+        console.log('USERS SECRET')
+        return <div>
+            {props.users.map((u, i) => <div key={i}>{u}</div>)}
+        </div>
+    }
+
+    const Users = React.memo(UsersSecret)
+    export const HelpsToReactMemo = () => {
+
+        console.log('HelpsToReactMemo')
+        const [counter, setCounter] = useState(0)
+        const [users, setUsers] = useState(['Alex', 'Leha', 'Gleb'])
+
+        const newArray = useMemo(()=>{
+            return users.filter(u=> u.toLowerCase().includes('a'))
+        },[users])
+
+
+        const addUser = () => {
+            const newUser = [...users, 'Igoria' + new Date().getTime()]
+            setUsers(newUser);
+        }
+
+
+        return <>
+            <button onClick={() => setCounter(counter + 1)}>+</button>
+            <button onClick={() => addUser()}>add user</button>
+            {counter}
+            <Users users={newArray}/>
+        </>
+    };
