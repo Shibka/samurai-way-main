@@ -51,7 +51,7 @@ function App() {
             <RatingMemo onClick={setRatingValue}
                         value={ratingValue}/>
 
-            <SelectMemo onClick={changeTitle}
+            <Select onClick={changeTitle}
                         value={''}
                         collapsed={collapsed}
                         onChange={toggleItems}
