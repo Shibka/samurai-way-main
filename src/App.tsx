@@ -24,15 +24,6 @@ function App() {
         {title: 'Gleb', value: 3}
     ])
     let [value, setValue] = useState(1)
-    const changeTitle = (title: string) => {
-        setTitle(title)
-        setCollapsed(true)
-    }
-    const changeCollapsed = () => {
-        setCollapsed(!collapsed)
-    }
-    const toggleItems = () => setCollapsed(!collapsed)
-
 
     return (
         <div className={"App"}>

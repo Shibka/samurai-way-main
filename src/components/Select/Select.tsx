@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Select.module.css'
 
+
 type ItemType = {
     title: string
     value: any
@@ -10,7 +11,10 @@ export type SelectPropsType = {
     onChange: (value: any) => void
     items: ItemType[]
 };
+
+
 export const Select = (props: SelectPropsType) => {
+
 
     const [hoveredElement, setHoveredElement] = useState(props.value)
     const [active, setActive] = useState(false)
@@ -75,3 +79,4 @@ export const Select = (props: SelectPropsType) => {
 };
 
 
+export const SelectMemo = React.memo(Select)
