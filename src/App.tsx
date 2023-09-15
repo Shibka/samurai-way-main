@@ -8,7 +8,7 @@ import UncontrolledAccordion, {
 } from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating, UncontrolledRatingMemo} from "./components/UncontrolledRating/UncontrolledRating";
 import {OnOff, OnOffMemo} from "./components/OnOff/OnOff";
-import {Select, SelectMemo} from "./components/Select/Select";
+import {Select} from "./components/Select/Select";
 
 function App() {
     console.log("App rendering");
@@ -23,6 +23,7 @@ function App() {
         {title: 'Leha', value: 2},
         {title: 'Gleb', value: 3}
     ])
+    let [value, setValue] = useState(1)
     const changeTitle = (title: string) => {
         setTitle(title)
         setCollapsed(true)
@@ -35,34 +36,32 @@ function App() {
 
     return (
         <div className={"App"}>
-            <OnOffMemo on={on}
-                       onClick={setOn}/>
+            {/*<OnOffMemo on={on}*/}
+            {/*           onClick={setOn}/>*/}
 
-            <UncontrolledOnOffMemo onClick={setOn}
-                                   on={on}/>
+            {/*<UncontrolledOnOffMemo onClick={setOn}*/}
+            {/*                       on={on}/>*/}
 
-            <AccordionMemo titleValue={title}
-                           collapsed={collapsed}
-                           onChange={changeCollapsed}
-                           items={items}
-                           onClick={() => {
-                           }}/>
+            {/*<AccordionMemo titleValue={title}*/}
+            {/*               collapsed={collapsed}*/}
+            {/*               onChange={changeCollapsed}*/}
+            {/*               items={items}*/}
+            {/*               onClick={() => {*/}
+            {/*               }}/>*/}
 
-            <RatingMemo onClick={setRatingValue}
-                        value={ratingValue}/>
+            {/*<RatingMemo onClick={setRatingValue}*/}
+            {/*            value={ratingValue}/>*/}
 
-            <Select onClick={changeTitle}
-                        value={''}
-                        collapsed={collapsed}
-                        onChange={toggleItems}
-                        title={title}
-                        items={[
-                            {title: 'Alex', value: 1},
-                            {title: 'Leha', value: 2},
-                            {title: 'Gleb', value: 3}
-                        ]}/>
-            <UncontrolledAccordionMemo titleValue={title}/>
-            <UncontrolledRatingMemo/>
+
+      <Select value={value}
+      onChange={setValue}
+              items={items}/>
+
+
+
+
+            {/*<UncontrolledAccordionMemo titleValue={title}/>*/}
+            {/*<UncontrolledRatingMemo/>*/}
 
         </div>
     );

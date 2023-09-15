@@ -14,31 +14,22 @@ type Select = StoryObj<typeof meta>;
 
 export const Collapsed: Select = {
     args: {
-        collapsed: true,
         onChange: () => {
         },
         items: [{title: 'Alex', value: 1}, {title: 'Leha', value: 2}, {title: 'Gleb', value: 3}],
-        onClick: () => {
-        }
     },
 };
 export const ChangingSelect: Select = {
     render: (args) => {
         // eslint-disable-next-line
-        const [value, setValue] = useState(true);
+        const [value, setValue] = useState(1);
         // eslint-disable-next-line
-        const [parentValue, setParentValue] = useState('Select')
 
         return (
             <Select
                 {...args}
-                title={parentValue}
-                collapsed={value}
-                onChange={() => setValue(!value)}
-                onClick={(id) => {
-                    setParentValue(id)
-                    setValue(true)
-                }}
+                onChange={setValue}
+                value={value}
                 items={[
                     {title: 'Alex', value: 1},
                     {title: 'Leha', value: 2},

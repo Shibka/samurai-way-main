@@ -1,31 +1,41 @@
-.selectTitle {
-    border: black 1px solid;
-    width: 80px;
-    text-align: left;
-}
-.selectTitleCollapsed {
-    border: black 2px solid;
-    width: 80px;
-    text-align: left;
-}
-.arrowRight {
-    position: relative;
+/*.selectTitle {*/
+/*    border: black 1px solid;*/
+/*    width: 80px;*/
+/*    text-align: left;*/
+/*}*/
+/*.selectTitleCollapsed {*/
+/*    border: black 2px solid;*/
+/*    width: 80px;*/
+/*    text-align: left;*/
+/*}*/
+/*.arrowRight {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-top: 10px solid transparent;*/
+/*    border-bottom: 10px solid transparent;*/
+/*    border-left: 10px solid black;*/
+/*    text-align: right;*/
+/*}*/
+
+.select .main{
+    border: 1px solid black;
     display: inline-block;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid black;
-    text-align: right;
+    min-height: 20px;
+    min-width: 40px;
 }
 .items {
-    border: black 1px solid;
-    width: 80px;
-    height: 90px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around
+    position: absolute;
+padding: 5px;
+    border: 1px black solid;
+    /*border: black 1px solid;*/
+    /*width: 80px;*/
+    /*height: 90px;*/
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-around*/
 }
 .item.selected {
     background-color: blue;
